@@ -1,13 +1,16 @@
-import { Collection } from "../global";
-import { groupBy } from "../utils";
+import { Collection } from '../global';
+import { groupBy } from '../utils';
 
 Object.defineProperties(Math, {
     average: {
         value: function (collection: Collection) {
-            const sum = collection.reduce((prev, curr) => Number(prev) + Number(curr), 0);
+            const sum = collection.reduce(
+                (prev, curr) => Number(prev) + Number(curr),
+                0
+            );
             const len = collection.length;
             return Number(sum) / len;
-        }
+        },
     },
     median: {
         value: function (collection: Collection) {
@@ -19,7 +22,7 @@ Object.defineProperties(Math, {
             }
 
             return Number(collection[Math.floor(collection.length / 2)]);
-        }
+        },
     },
     mode: {
         value: function (collection: Collection) {
@@ -36,13 +39,17 @@ Object.defineProperties(Math, {
                 }
                 return 0;
             });
-            const groupedOccurrences = [...groupBy(sortedOccurrences, sortedOccurrences => sortedOccurrences[1])];
-            return groupedOccurrences[groupedOccurrences.length - 1][1]
-                .map(value =>
-                    Number(value[0])
-                )[0];
-        }
-    }
+            const groupedOccurrences = [
+                ...groupBy(
+                    sortedOccurrences,
+                    (sortedOccurrences) => sortedOccurrences[1]
+                ),
+            ];
+            return groupedOccurrences[groupedOccurrences.length - 1][1].map(
+                (value) => Number(value[0])
+            )[0];
+        },
+    },
 });
 
-export { };
+export {};

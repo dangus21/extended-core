@@ -8,7 +8,7 @@
   "scripts": {
     "compile": "tsc",
     "start": "nodemon --watch src/**/* -e ts,tsx --exec ts-node --files src/index.ts",
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "devDependencies": {
     "@types/jest": "^29.2.2",

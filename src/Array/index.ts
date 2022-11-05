@@ -1,21 +1,25 @@
 Object.defineProperties(Array.prototype, {
     occurrences: {
         value: function (this: (string | number)[]): Record<string, number> {
-            const occurrences = this.reduce((prev, curr) => {
-                if (curr in prev) {
+            const mappedOccurrences = this.map((occ) => occ.toString());
+            const occurrences = mappedOccurrences.reduce(
+                (prev: Record<string, number>, curr) => {
+                    if (curr in prev) {
+                        return {
+                            ...prev,
+                            [curr]: prev[curr] + 1,
+                        };
+                    }
                     return {
                         ...prev,
-                        [curr]: prev[curr] + 1,
+                        [curr]: 1,
                     };
-                }
-                return {
-                    ...prev,
-                    [curr]: 1,
-                };
-            }, {});
+                },
+                {}
+            );
             return occurrences;
-        }
-    }
+        },
+    },
 });
 
-export { };
+export {};

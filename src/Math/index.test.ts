@@ -14,3 +14,5 @@ describe('Math', () => {
         expect(result).toBe(2);
     });
 });
+
+export {};

@@ -11,4 +11,5 @@ export default {
     moduleFileExtensions: ['ts', 'js'],
     preset: 'ts-jest/presets/js-with-babel',
     testMatch: ['**/?(*.)+(test).ts'],
+    setupFilesAfterEnv: ['<rootDir>/scripts/setup-jest.ts'],
 };
