@@ -1,1 +1,2 @@
-export * from './Math'
+export * from './Array';
+export * from './Math';
