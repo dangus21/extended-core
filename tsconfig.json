@@ -1,33 +1,29 @@
 {
-  "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig to read more about this file */
-    /* Language and Environment */
-    "target": "ESNext"                                /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */, 
-    "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
-    /* Modules */
-    "module": "commonjs"                              /* Specify what module code is generated. */, // "rootDir": "./",                                  /* Specify the root folder within your source files. */
-    "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
-    "typeRoots": ["/src/global.d.ts"],                   /* Specify multiple folders that act like './node_modules/@types'. */
-    "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
-    /* Emit */
-    "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
-    "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
-    "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
-    "esModuleInterop": true                           /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */, // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
-    "forceConsistentCasingInFileNames": true          /* Ensure that casing is correct in imports. */ /* Type Checking */,
-    "strict": true                                    /* Enable all strict type-checking options. */,
-    "noImplicitAny": false                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */, // "strictNullChecks": true,                         /* When type checking, take into account 'null' and 'undefined'. */
-    "lib": ["dom", "dom.iterable", "esnext"],         /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "allowJs": false,                                 /* Allow JavaScript files to be a part of your program. Use the checkJS option to get errors from these files. */
-    "noEmit": false,                                  /* Disable emitting file from a compilation. */
-    "incremental": true,                              /* Enable incremental compilation */
-    "resolveJsonModule": true,                        /* Enable importing .json files */
-    "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
-    "newLine": "lf",                                  /* Set the newline character for emitting files. */
-    "allowSyntheticDefaultImports": true,             /* Allow 'import x from y' when a module doesn't have a default export. */
-    "noUnusedLocals": true,                           /* Enable error reporting when local variables aren't read. */
-    // "outFile": "./",                               /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
-    "outDir": "./out",                                /* Specify an output folder for all emitted files. */
-  },
-  "exclude": ["node_modules"]
+    "compilerOptions": {
+        /* Visit https://aka.ms/tsconfig to read more about this file */
+        "types": ["jest"],
+        "target": "ESNext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+        "module": "commonjs" /* Specify what module code is generated. */, // "rootDir": "./",                                  /* Specify the root folder within your source files. */
+        "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
+        "allowUmdGlobalAccess": true /* Allow accessing UMD globals from modules. */,
+        "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
+        "declarationMap": true /* Create sourcemaps for d.ts files. */,
+        "sourceMap": true /* Create source map files for emitted JavaScript files. */,
+        "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */, // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
+        "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */ /* Type Checking */,
+        "strict": true /* Enable all strict type-checking options. */,
+        "lib": [
+            "esnext"
+        ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+        "allowJs": false /* Allow JavaScript files to be a part of your program. Use the checkJS option to get errors from these files. */,
+        "noEmit": false /* Disable emitting file from a compilation. */,
+        "incremental": true /* Enable incremental compilation */,
+        "resolveJsonModule": true /* Enable importing .json files */,
+        "newLine": "crlf" /* Set the newline character for emitting files. */,
+        "allowSyntheticDefaultImports": true /* Allow 'import x from y' when a module doesn't have a default export. */,
+        "noUnusedLocals": true /* Enable error reporting when local variables aren't read. */,
+        "outDir": "./out" /* Specify an output folder for all emitted files. */
+    },
+    "exclude": ["node_modules"],
+    "include": ["src/**/*"]
 }
