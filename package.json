@@ -1,6 +1,12 @@
 {
+	"main": "./out",
+	"repository": {
+		"url": "https://github.com/dangus21/extended-core.git",
+		"directory": "out",
+		"type": "git"
+	},
 	"scripts": {
-		"compile": "typescript",
+		"compile": "tsc",
 		"start": "nodemon --watch src/**/* -e ts,tsx --exec ts-node --files src/index.ts"
 	},
 	"devDependencies": {
