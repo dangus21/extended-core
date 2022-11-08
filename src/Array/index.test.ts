@@ -1,8 +1,10 @@
+import { occurrences, at } from "./array";
+
 const testArray = [2, 3, 5, 4, 7, 8, 9, 4, 2, 6, 5, 4, 1, 2, 3, 9];
 
 describe('Array', () => {
     it('Occurrences', () => {
-        const result = testArray.occurrences();
+        const result = occurrences(testArray);
         expect(result).toEqual({
             '1': 1,
             '2': 3,
@@ -17,19 +19,19 @@ describe('Array', () => {
     });
     describe('At', () => {
         it('should return with values for given index', () => {
-            const result = testArray.at(4);
+            const result = at(testArray, 4);
             expect(result).toBe(7);
         });
         it('should return with values for negative number, -1, being the last value of collection', () => {
-            const result = testArray.at(-1);
+            const result = at(testArray, -1);
             expect(result).toBe(9);
         });
         it('should return with values for negative number, being the last value of collection', () => {
-            const result = testArray.at(-100);
+            const result = at(testArray, -100);
             expect(result).toBe(9);
         });
         it('should throw an error for index greater than input length', () => {
-            expect(() => testArray.at(100)).toThrow();
+            expect(() => at(testArray, 100)).toThrow();
         });
     });
 });
