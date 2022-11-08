@@ -20,6 +20,18 @@ Object.defineProperties(Array.prototype, {
             return occurrences;
         },
     },
+    at: {
+        value: function (this: unknown[], index: number) {
+            if(index > this.length){
+                throw new Error('Index is greater than the input range');
+            }
+            if (index < 0) {
+                return this[this.length - 1];
+            }
+            
+            return this[index];
+        },
+    },
 });
 
 export {};
