@@ -1,7 +1,1 @@
-import { average, median, mode } from './math';
-const ECMath = {
-    average,
-    median,
-    mode,
-};
-export { ECMath };
+export { average, median, mode, thirds } from './math';

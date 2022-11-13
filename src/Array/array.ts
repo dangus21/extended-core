@@ -1,5 +1,6 @@
 import { Collection } from '../types';
 
+/** Counts occurrences of elements in 2D array */
 function occurrences(collection: Collection): Record<string, number> {
     const mappedOccurrences = collection.map((occ) => occ.toString());
     const occurrences = mappedOccurrences.reduce(

@@ -1,2 +1,2 @@
-export { ECArray } from './Array';
-export { ECMath } from './Math';
+export * from './Array';
+export * from './Math';

@@ -2,10 +2,7 @@ import { occurrences } from '../Array/array';
 import { groupBy } from '../utils';
 
 function average(collection: number[]) {
-    const sum = collection.reduce(
-        (prev, curr) => prev + Number(curr),
-        0
-    );
+    const sum = collection.reduce((prev, curr) => prev + Number(curr), 0);
     const len = collection.length;
     return sum / len;
 }
@@ -46,8 +43,35 @@ function mode(collection: number[]) {
     )[0];
 }
 
-export {
-    average,
-    median,
-    mode
+type Thirds = {
+    a: number;
+    b: number;
+    c?: number;
+    d?: number;
 };
+/** Rule of thirds function where a is to b, as c is to d, where if
+ * either c or d are missing, thats the value calculated
+ */
+function thirds({ a, b, c, d }: Thirds) {
+    let result = 0;
+
+    if (!c && !d) {
+        throw new Error('Missing one of the second set of parameter');
+    }
+
+    if (!d) {
+        try {
+            if (c) {
+                result = (b * c) / a;
+            }
+        } catch (error) {
+            throw new Error('Missing C parameter');
+        }
+    } else {
+        result = (a * d) / b;
+    }
+
+    return Number(result.toFixed(2));
+}
+
+export { average, median, mode, thirds };

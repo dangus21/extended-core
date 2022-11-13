@@ -1,6 +1,1 @@
-import {at, occurrences} from './array';
-const ECArray = {
-    at,
-    occurrences
-};
-export { ECArray };
+export { at, occurrences } from './array';
