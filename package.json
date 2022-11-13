@@ -4,6 +4,7 @@
     "name": "angus",
     "url": "https://github.com/dangus21"
   },
+  "license": "MIT",
   "name": "extended-core",
   "main": "./out/index.js",
   "repository": {
@@ -30,5 +31,5 @@
     "typescript": "^4.8.4"
   },
   "types": "out/index.d.ts",
-  "version": "0.0.31"
+  "version": "0.0.32"
 }
